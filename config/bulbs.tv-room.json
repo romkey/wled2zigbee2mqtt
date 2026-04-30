@@ -1,0 +1,42 @@
+[
+  {
+    "friendly_name": "?TV Ceiling 2?",
+    "pixel": 0
+  },
+  {
+    "friendly_name": "?TV ceiling?",
+    "pixel": 1
+  },
+  {
+    "friendly_name": "?TV Floor Lamp?",
+    "pixel": 2
+  },
+  {
+    "friendly_name": "?TV Room?",
+    "pixel": 3
+  },
+  {
+    "friendly_name": "?TV Room2?",
+    "pixel": 4
+  },
+  {
+    "friendly_name": "?TV Side 3?",
+    "pixel": 5
+  },
+  {
+    "friendly_name": "?TV Side?",
+    "pixel": 6
+  },
+  {
+    "friendly_name": "?TV Side2?",
+    "pixel": 7
+  },
+  {
+    "friendly_name": "TV Room Ceiling 2",
+    "pixel": 46
+  },
+  {
+    "friendly_name": "TV Room Ceiling 4",
+      "pixel": 47
+  }
+]

@@ -1,0 +1,37 @@
+services:
+  wled2zigbee2mqtt:
+    build: .
+    container_name: wled2zigbee2mqtt
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MQTT_URL: ${MQTT_URL:-mqtt://mqtt:1883}
+      MQTT_USERNAME: ${MQTT_USERNAME:-}
+      MQTT_PASSWORD: ${MQTT_PASSWORD:-}
+      MQTT_BASE_TOPIC: ${MQTT_BASE_TOPIC:-zigbee2mqtt}
+      DDP_HOST: ${DDP_HOST:-0.0.0.0}
+      DDP_PORT: ${DDP_PORT:-4048}
+      AUTO_DISCOVER: ${AUTO_DISCOVER:-true}
+      BULBS_FILE: ${BULBS_FILE:-/config/bulbs.json}
+      DISCOVERY_OUTPUT: ${DISCOVERY_OUTPUT:-/config/bulbs.generated.json}
+      FRAME_INTERVAL_MS: ${FRAME_INTERVAL_MS:-750}
+      CHANGE_THRESHOLD: ${CHANGE_THRESHOLD:-3}
+      TRANSITION_SECONDS: ${TRANSITION_SECONDS:-0.5}
+      TURN_OFF_AT_BLACK: ${TURN_OFF_AT_BLACK:-true}
+      PUBLISH_BATCH_SIZE: ${PUBLISH_BATCH_SIZE:-25}
+      PUBLISH_BATCH_DELAY_MS: ${PUBLISH_BATCH_DELAY_MS:-25}
+      PUBLISH_RETAIN: ${PUBLISH_RETAIN:-false}
+    ports:
+      - "${DDP_PORT:-4048}:${DDP_PORT:-4048}/udp"
+    volumes:
+      - ./config:/config
+
+  # Uncomment this broker if you do not already run MQTT elsewhere.
+  # mqtt:
+  #   image: eclipse-mosquitto:2
+  #   restart: unless-stopped
+  #   ports:
+  #     - "1883:1883"
+  #   volumes:
+  #     - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro

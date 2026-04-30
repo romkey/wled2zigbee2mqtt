@@ -1,0 +1,18 @@
+[
+  {
+    "friendly_name": "Bedroom Ceiling Bulb ",
+    "pixel": 12
+  },
+  {
+    "friendly_name": "Bedroom Ceiling Bulb 2",
+    "pixel": 13
+  },
+  {
+    "friendly_name": "Bedroom Ceiling Bulb 3",
+    "pixel": 14
+  },
+  {
+    "friendly_name": "Bedroom Dresser Lamp",
+    "pixel": 15
+  }
+]

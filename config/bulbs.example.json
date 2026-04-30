@@ -1,0 +1,10 @@
+[
+  {
+    "friendly_name": "Living Room Lamp",
+    "pixel": 0
+  },
+  {
+    "friendly_name": "Kitchen Lamp",
+    "pixel": 1
+  }
+]
